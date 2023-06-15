@@ -412,7 +412,7 @@ function MainHolder:Window(HubTitle)
     SearchBox.Position = UDim2.new(0.307332307, 0, 0.271186769, 0)
     SearchBox.Size = UDim2.new(0, 200, 0, 31)
     SearchBox.Font = Enum.Font.Gotham
-    SearchBox.PlaceholderText = "Search here"
+    SearchBox.PlaceholderText = "هنا ابحث"
     SearchBox.Text = ""
     SearchBox.TextColor3 = Color3.fromRGB(255, 255, 255)
     SearchBox.TextSize = 14.000
@@ -716,7 +716,6 @@ function MainHolder:Window(HubTitle)
     end)
 
     PluginsImageButton.MouseButton1Click:Connect(function()
-        MainHolder:Notify("", "Curently In Development", 1)
         for i,v in pairs(MainFrameItemsHolder:GetChildren()) do
             if v.ClassName == "TextLabel" and v.Name ~= "MainTitle" and v.Name ~= "TimeText" then
                 TweenService:Create(
@@ -1000,7 +999,7 @@ function MainHolder:Window(HubTitle)
     SettingsTitle.Position = UDim2.new(0.41093117, 0, 0.217391312, 0)
     SettingsTitle.Size = UDim2.new(0, 87, 0, 17)
     SettingsTitle.Font = Enum.Font.Gotham
-    SettingsTitle.Text = "Settings"
+    SettingsTitle.Text = "الاعدادات"
     SettingsTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
     SettingsTitle.TextSize = 20.000
 
