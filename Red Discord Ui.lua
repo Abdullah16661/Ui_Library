@@ -1501,18 +1501,18 @@ function DiscordLib:Window(text)
 					ItemText.Position = UDim2.new(0.0211081803, 0, 0, 0)
 					ItemText.Size = UDim2.new(0, 192, 0, 29)
 					ItemText.Font = Enum.Font.Gotham
-					ItemText.TextColor3 = Color3.fromRGB(212, 212, 212)
+					ItemText.TextColor3 = Color3.fromRGB(255, 255, 255)
 					ItemText.TextSize = 14.000
 					ItemText.TextXAlignment = Enum.TextXAlignment.Left
 					ItemText.Text = v
 					
 					Item.MouseEnter:Connect(function()
-						ItemText.TextColor3 = Color3.fromRGB(255,255,255)
+						ItemText.TextColor3 = Color3.fromRGB(255, 255, 255)
 						Item.BackgroundTransparency = 0
 					end)
 					
 					Item.MouseLeave:Connect(function()
-						ItemText.TextColor3 = Color3.fromRGB(212, 212, 212)
+						ItemText.TextColor3 = Color3.fromRGB(255, 255, 255)
 						Item.BackgroundTransparency = 1
 					end)
 					
@@ -1572,7 +1572,7 @@ function DiscordLib:Window(text)
 
 					Item.Name = "Item"
 					Item.Parent = DropItemHolder
-					Item.BackgroundColor3 = Color3.fromRGB(42, 44, 48)
+					Item.BackgroundColor3 = Color3.fromRGB(55, 0, 0)
 					Item.Size = UDim2.new(0, 379, 0, 29)
 					Item.AutoButtonColor = false
 					Item.Font = Enum.Font.SourceSans
@@ -1592,7 +1592,7 @@ function DiscordLib:Window(text)
 					ItemText.Position = UDim2.new(0.0211081803, 0, 0, 0)
 					ItemText.Size = UDim2.new(0, 192, 0, 29)
 					ItemText.Font = Enum.Font.Gotham
-					ItemText.TextColor3 = Color3.fromRGB(212, 212, 212)
+					ItemText.TextColor3 = Color3.fromRGB(255, 255, 255)
 					ItemText.TextSize = 14.000
 					ItemText.TextXAlignment = Enum.TextXAlignment.Left
 					ItemText.Text = textadd
@@ -1603,7 +1603,7 @@ function DiscordLib:Window(text)
 					end)
 
 					Item.MouseLeave:Connect(function()
-						ItemText.TextColor3 = Color3.fromRGB(212, 212, 212)
+						ItemText.TextColor3 = Color3.fromRGB(255, 255, 255)
 						Item.BackgroundTransparency = 1
 					end)
 
