@@ -1953,11 +1953,11 @@ function DiscordLib:Window(text)
 				local Label = Instance.new("TextButton")
 				local LabelTitle = Instance.new("TextLabel")
 				local LabelFrameCorner = Instance.new("UICorner")
-                local labelfunc = {}
+                                local labelfunc = {}
 
 				Label.Name = "Label"
 				Label.Parent = ChannelHolder
-				Label.BackgroundColor3 = Color3.fromRGB(40, 0, 0)
+				Label.BackgroundColor3 = Color3.fromRGB(55, 0, 0)
 				Label.BorderSizePixel = 0
 				Label.Position = UDim2.new(0.261979163, 0, 0.190789461, 0)
 				Label.Size = UDim2.new(0, 401, 0, 30)
