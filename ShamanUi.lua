@@ -117,27 +117,7 @@ local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 
 local Mouse = game.Players.LocalPlayer:GetMouse()
-
 local Blacklist = {Enum.KeyCode.Unknown, Enum.KeyCode.CapsLock, Enum.KeyCode.Escape, Enum.KeyCode.Tab, Enum.KeyCode.Return, Enum.KeyCode.Backspace, Enum.KeyCode.Space, Enum.KeyCode.W, Enum.KeyCode.A, Enum.KeyCode.S, Enum.KeyCode.D}
-
-local request = syn and syn.request or http and http.request or http_request or request or httprequest
-local getcustomasset = getcustomasset or getsynasset
-local isfolder = isfolder or syn_isfolder or is_folder
-local makefolder = makefolder or make_folder or createfolder or create_folder
-
-if not isfolder("Unnamed") then
-makefolder("Unnamed")
-    
-local Shadow = request({Url = "https://raw.githubusercontent.com/Rain-Design/Unnamed/main/Icons/UnnamedShadow.png", Method = "GET"})
-writefile("Unnamed/Shadow.png", Shadow.Body)
-
-local Chevron = request({Url = "https://raw.githubusercontent.com/Rain-Design/Unnamed/main/Icons/Chevron.png", Method = "GET"})
-writefile("Unnamed/Chevron.png", Chevron.Body)
-
-local Circle = request({Url = "https://raw.githubusercontent.com/Rain-Design/Unnamed/main/Icons/Circle.png", Method = "GET"})
-writefile("Unnamed/Circle.png", Circle.Body)
-end
-
 local SelectedTab = nil
 
 function  library:Darken(clr3)
@@ -360,7 +340,7 @@ shadow.Parent = CoreGui
 
 local mainShadow = Instance.new("ImageLabel")
 mainShadow.Name = "MainShadow"
-mainShadow.Image = getcustomasset("Unnamed/Shadow.png")
+mainShadow.Image = "rbxassetid://"
 mainShadow.ImageColor3 = Theme.Shadow
 mainShadow.ImageTransparency = 0.2
 mainShadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -768,7 +748,7 @@ sectionButton.ZIndex = Sections + 1
 
 local sectionIcon = Instance.new("ImageLabel")
 sectionIcon.Name = "SectionIcon"
-sectionIcon.Image = getcustomasset("Unnamed/Chevron.png")
+sectionIcon.Image = ""
 sectionIcon.ImageColor3 = Theme.SectionText
 sectionIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 sectionIcon.BackgroundTransparency = 1
@@ -1069,7 +1049,7 @@ sliderInnerUICorner.Parent = sliderInner
 
 local dragIcon = Instance.new("ImageLabel")
 dragIcon.Name = "dragIcon"
-dragIcon.Image = getcustomasset("Unnamed/Circle.png")
+dragIcon.Image = "rbxassetid://11422141677"
 dragIcon.ImageColor3 = Theme.ItemText
 dragIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 dragIcon.BackgroundTransparency = 1
@@ -1261,7 +1241,7 @@ dropdownUIStroke.Parent = dropdownFrame
 
 local dropdownIcon = Instance.new("ImageLabel")
 dropdownIcon.Name = "dropdownIcon"
-dropdownIcon.Image = getcustomasset("Unnamed/Chevron.png")
+dropdownIcon.Image = ""
 dropdownIcon.ImageColor3 = Theme.ItemText
 dropdownIcon.Active = true
 dropdownIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1571,7 +1551,7 @@ toggleOuterUICorner.Parent = toggleOuter
 
 local toggleInner = Instance.new("ImageLabel")
 toggleInner.Name = "toggleInner"
-toggleInner.Image = getcustomasset("Unnamed/Circle.png")
+toggleInner.Image = "rbxassetid://11422141677"
 toggleInner.ImageColor3 = Theme.ToggleInner
 toggleInner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 toggleInner.BackgroundTransparency = 1
