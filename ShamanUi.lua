@@ -1655,17 +1655,17 @@ end)
 end
 
 function sectiontable:Label(Info)
-    Info.Text = Info.Text or "Button"
+    Info.Text = Info.Text or "Label"
     
     local Label = Instance.new("Frame")
-    Label.Name = "Button"
+    Label.Name = "Label"
     Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     Label.BackgroundTransparency = 1
     Label.Size = UDim2.new(0, 175, 0, 28)
     Label.Parent = itemContainer
     
     local LabelFrame = Instance.new("Frame")
-    LabelFrame.Name = "ButtonFrame"
+    LabelFrame.Name = "LabelFrame"
     LabelFrame.AnchorPoint = Vector2.new(0.5, 0.5)
     LabelFrame.BackgroundColor3 = Theme.ItemFrame
     LabelFrame.BorderSizePixel = 0
@@ -1674,18 +1674,9 @@ function sectiontable:Label(Info)
     LabelFrame.Parent = Label
     
     local LabelUIStroke = Instance.new("UIStroke")
-    LabelUIStroke.Name = "buttonUIStroke"
+    LabelUIStroke.Name = "LabelUIStroke"
     LabelUIStroke.Color = Theme.ItemUIStroke
     LabelUIStroke.Parent = LabelFrame
-    
-    buttonFrame.MouseEnter:Connect(function()
-        TweenService:Create(buttonFrame, TweenInfo.new(.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundColor3 = Theme.HoverItemFrame}):Play()
-    end)
-    
-    buttonFrame.MouseLeave:Connect(function()
-        TweenService:Create(buttonFrame, TweenInfo.new(.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {BackgroundColor3 = Theme.ItemFrame}):Play()
-        TweenService:Create(buttonUIStroke, TweenInfo.new(.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {Color = Theme.ItemUIStroke}):Play()
-    end)
 end
 
 return sectiontable
