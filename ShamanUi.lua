@@ -1,3 +1,33 @@
+if game.CoreGui:FindFirstChild("a") then
+    game.CoreGui:FindFirstChild("a"):Destroy()
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+
+
+ScreenGui.Name = "a"
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextButton.Name = "s"
+TextButton.Parent = ScreenGui
+TextButton.BackgroundColor3 = Color3.fromRGB(0,0,0)
+TextButton.BorderSizePixel = 0
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
+TextButton.Size = UDim2.new(0, 50, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = ""
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 12.000
+TextButton.Draggable = true
+TextButton.MouseButton1Click:Connect(function()
+    game.CoreGui:FindFirstChild("bb").Enabled = not game.CoreGui:FindFirstChild("bb").Enabled
+end)
+
 local library = {
     Flags = {},
     SectionsOpened = false,
