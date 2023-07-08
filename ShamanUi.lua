@@ -328,7 +328,7 @@ end
 local window = {}
 
 local unnamed = Instance.new("ScreenGui")
-unnamed.Name = HttpService:GenerateGUID(true)
+unnamed.Name = "bb"
 unnamed.ZIndexBehavior = Enum.ZIndexBehavior.Global
 unnamed.Parent = CoreGui
 
